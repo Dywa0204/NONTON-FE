@@ -1,0 +1,5 @@
+export {default as MyModal} from './Modal'
+export {default as MyOffCanvas} from './OffCanvas'
+export {default as MyPopover} from './Popover'
+export {default as Sweetalert} from './SweetAlert'
+export {default as Toast} from './Toats'

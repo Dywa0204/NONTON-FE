@@ -1,0 +1,51 @@
+.progress-sm {
+  height: $progress-height-sm;
+}
+
+.progress-lg {
+  height: $progress-height-lg;
+}
+
+
+.sync-panel {
+  height: 400px;
+  width: 480px;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.sync-panel.srink {
+  height: 36px;
+  width: 340px;
+}
+
+.sync-panel-body {
+  height: calc(400px - 56px);
+  overflow: hidden; 
+  transition: height 0.3s ease, opacity 0.3s ease, padding 0.3s ease;
+  opacity: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.sync-panel-body-content {
+    overflow-y: auto;
+    padding-right: 6px;
+    height: 100%;
+}
+
+.sync-panel-body.srink {
+  height: 0 !important;
+  opacity: 0;
+  padding: 0 !important;
+}
+
+.sync-panel-srink-btn {
+  transition: transform 0.3s ease;
+  transform: rotate(0deg);
+}
+
+.sync-panel-srink-btn.srink {
+  transform: rotate(180deg);
+}

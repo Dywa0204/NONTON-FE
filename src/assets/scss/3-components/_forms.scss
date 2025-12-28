@@ -1,0 +1,61 @@
+.input-group-navbar {
+  .form-control,
+  .btn {
+    height: $input-height-lg;
+    background: $navbar-input-bg;
+    box-shadow: none;
+    border: 0;
+    padding: $input-padding-y-lg $spacer*0.75;
+
+    &:focus {
+      background: $navbar-input-bg;
+      box-shadow: none;
+      outline: 0;
+    }
+  }
+
+  .btn {
+    color: $gray-600;
+
+    .feather {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.select-addon-left {
+  border: 1px solid #ced4da;
+  padding-right: 0.5rem !important;
+  padding-left: 0.5rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  color: #495057;
+  background-color: #f4f7f9;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  white-space: nowrap;
+}
+
+.select-addon:hover .select-addon-left {
+  border-color: #adb5bd;
+}
+
+.select-addon:focus-within .select-addon-left {
+  box-shadow: 0 0 0 1px #2684ff, 0 0 0 2px rgba(38, 132, 255, 0.3);
+}
+
+.form-control:disabled {
+  background-color: #f2f2f2 !important;
+}
+
+.form-floating > .form-control:disabled ~ label::after {
+  background-color: #f2f2f2 !important;
+}
+
+.form-floating > .form-control:not(:disabled):not(:placeholder-shown) ~ label::after {
+  background-color: #ffffff !important;
+}

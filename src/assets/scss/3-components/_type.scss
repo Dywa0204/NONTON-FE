@@ -1,0 +1,36 @@
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+b,
+strong,
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+  color: $text-bold-color;
+}
+
+pre.snippet {
+  .hljs {
+    background: $static-dark;
+    border-radius: $border-radius-lg;
+    padding: $spacer;
+  }
+}
+
+a {
+  cursor: pointer;
+}
+
+
+.fixed-height-name {
+  height: 3em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

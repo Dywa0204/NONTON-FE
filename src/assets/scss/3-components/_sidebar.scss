@@ -1,0 +1,69 @@
+// Sidebar general
+@import "sidebar/default";
+
+// Sidebar compact
+@import "sidebar/compact";
+
+
+.sidebar-item-branch {
+    width: 10px; 
+    height: 16px; 
+    position: absolute; 
+    top: 1px; 
+    left: -11px;
+    border-left: 1px solid #575e6f;
+    border-bottom: 1px solid #575e6f;
+    border-bottom-left-radius: 12px;
+}
+
+.sidebar-item-title {
+    background-color: #ffffff1f;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.sidebar-item-title.active {
+    background-color: #5a71ad;
+}
+
+.sidebar-item-title:hover {
+    text-decoration: none;
+    background-color: #575e6f;
+}
+
+.sidebar-item-title.active:hover {
+    background-color: #3a4a73;
+}
+
+.sidebar-item-logs {
+    width: 10px;
+    position: absolute;
+    border-right: 1px solid #575e6f;
+}
+
+.sidebar-last-branch {
+    width: 14px;
+    background-color: #293042;
+    position: absolute;
+    top: -16px;
+    left: -14px;
+}
+
+.sidebar-last-branch-child {
+    margin-left: 3px;
+    width: 10px;
+    height: 32px;
+    border-left: 1px solid #575e6f;
+    border-bottom: 1px solid #575e6f;
+    border-bottom-left-radius: 12px;
+}
+
+.sidebar-item-branch-child {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
