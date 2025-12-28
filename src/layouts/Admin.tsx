@@ -2,6 +2,7 @@ import { getNodeList, putSetDrive } from "@api/api";
 import { Toast } from "@components/reusable/dialogs";
 import { FileNode } from "@models/node/node";
 import Directory from "@pages/admin/directory/Directory";
+import FileDetail from "@pages/admin/file/FileDetail";
 import SyncFiles from "@pages/admin/sync/SyncManager";
 import { useEffect, useState } from "react";
 import { Button, Col, Form, Row } from "react-bootstrap";
@@ -124,10 +125,7 @@ const Admin = () => {
 
                     {/* FILE VIEW */}
                     {type === "file" && node && (
-                        <div>
-                            <h3>📄 {node.name}</h3>
-                            <pre>{JSON.stringify(node, null, 2)}</pre>
-                        </div>
+                        <FileDetail node={node} refreshData={fetchData} />
                     )}
                 </div>
             </Col>

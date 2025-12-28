@@ -3,7 +3,7 @@ import { FileNode, FormState } from "@models/node/node";
 import { Table, Modal, Button, Form } from "react-bootstrap";
 import { Edit } from "react-feather";
 import { putSetMeta } from "@api/api";
-import { Toast } from "@components/reusable/dialogs";
+import { Sweetalert, Toast } from "@components/reusable/dialogs";
 import SyncFiles from "../sync/SyncManager";
 
 type Props = {
@@ -50,6 +50,7 @@ const Directory = ({ nodeList, openItem, fetchData }: Props) => {
     };
 
     const onSubmit = async () => {
+        Sweetalert.loading("Update Data...")
         try {
             let body: FormState = {
                 type: form.type,
@@ -79,6 +80,8 @@ const Directory = ({ nodeList, openItem, fetchData }: Props) => {
         } catch (error) {
             Toast.error("Gagal update Meta")
         }
+
+        Sweetalert.close()
     };
 
     return (
